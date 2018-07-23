@@ -48,8 +48,8 @@ def main():
         for index, name, address in table:
             syscall = Syscall(index, name, address)
             systable.syscalls.add(syscall)
-            graph.create(syscall)
             logging.info('Inserting syscall %s', (index, name, address))
+            graph.create(syscall)
         graph.create(systable)
 
 
