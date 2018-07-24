@@ -61,3 +61,5 @@ class Syscall(GraphObject):
     index = Property()
     name = Property()
     address = Property()
+
+    table = RelatedFrom("SyscallTable")

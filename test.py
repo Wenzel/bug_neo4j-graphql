@@ -47,6 +47,7 @@ def main():
         systable = SyscallTable(table_index, TABLE_NAMES[table_index])
         for index, name, address in table:
             syscall = Syscall(index, name, address)
+            syscall.table.add(systable)
             systable.syscalls.add(syscall)
             logging.info('Inserting syscall %s', (index, name, address))
             graph.create(syscall)
